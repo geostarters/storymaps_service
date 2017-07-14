@@ -26,5 +26,5 @@ module.exports.validateUser = function(req, res, next){
 	    });
   	}
   	*/
-  	//next();
+  	next();
 };
