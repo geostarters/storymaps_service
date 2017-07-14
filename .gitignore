@@ -3,5 +3,4 @@ Command Prompt.lnk
 desktop.ini
 myLogFile.log
 ./myLogFile.log
-path.properties
-path_windows.properties
+*.properties
