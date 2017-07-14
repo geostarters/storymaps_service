@@ -1,0 +1,22 @@
+{
+  "name": "storymaps",
+  "version": "1.0.0",
+  "description": "Instamaps Story Maps",
+  "main": "service.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "boundingbox": "0.1.0",
+    "cookie-parser": "^1.4.3",
+    "express": "*",
+    "find-remove": "^1.0.0",
+    "geolib": "2.0.22",
+    "jsonwebtoken": "^7.4.1",
+    "request": "2.81.0",
+    "uuid": "^2.0.3"
+  },
+  "author": "geostart",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
