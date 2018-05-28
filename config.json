@@ -1,0 +1,4 @@
+{
+ "script":"deployScript.sh",
+ "hosts":["tic@172.30.28.6"]
+}
