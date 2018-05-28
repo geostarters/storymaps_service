@@ -1,4 +1,4 @@
 {
  "script":"deployScript.sh",
- "hosts":["tic@172.30.28.6"]
+ "hosts":["root@172.30.28.6"]
 }
