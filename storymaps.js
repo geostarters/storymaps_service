@@ -31,12 +31,21 @@ if( cluster.isMaster ) {
 else {
 console.log('worker '+ cluster.worker.id +' call');
 
+function allowCors(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Authorization");
+    next();
+
+}
 
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+
+app.use(allowCors);
 
 app.use('/'+_f.pathMainWeb+'/', storymaps);
 //app.use('/'+_f.pathMainWeb+'/municipis', municipis);
