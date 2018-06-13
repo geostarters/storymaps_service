@@ -34,15 +34,14 @@ console.log('worker '+ cluster.worker.id +' call');
 function allowCors(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Authorization");
+	res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Authorization");
     next();
 
 }
 
 var app = express();
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ limit: '2mb', extended: true }));
+app.use(bodyParser.json({limit: '2mb'}));
 app.use(cookieParser());
 
 app.use(allowCors);
